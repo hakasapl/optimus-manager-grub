@@ -17,11 +17,11 @@ chmod +x $PATH_TO_SCRIPT
 for var in "$@"; do
     # iterate over arguments
     if [ "$var" = "--disable-integrated" ]; then
-        sed -i '0,/ENABLE_INTEGRATED/c\ENABLE_INTEGRATED=false' $PATH_TO_SCRIPT
+        sed -i '/ENABLE_INTEGRATED=/c\ENABLE_INTEGRATED=false' $PATH_TO_SCRIPT
     elif [ "$var" = "--disable-hybrid" ]; then
-        sed -i '0,/ENABLE_HYBRID/c\ENABLE_HYBRID=false' $PATH_TO_SCRIPT
+        sed -i '/ENABLE_HYBRID=/c\ENABLE_HYBRID=false' $PATH_TO_SCRIPT
     elif [ "$var" = "--disable-nvidia" ]; then
-        sed -i '0,/ENABLE_NVIDIA/c\ENABLE_NVIDIA=false' $PATH_TO_SCRIPT
+        sed -i '/ENABLE_NVIDIA=/c\ENABLE_NVIDIA=false' $PATH_TO_SCRIPT
     elif [ "$var" = "--uninstall" ]; then
         rm -f $PATH_TO_SCRIPT
         UNINSTALLED=true
