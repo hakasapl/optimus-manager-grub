@@ -4,8 +4,9 @@ GRUB2 mkconfig script for creating [optimus-manager](https://github.com/Askannz/
 
 ## Usage
 
+1. Clone this repository and cd into it: `git clone https://github.com/hakasapl/optimus-manager-grub.git && cd optimus-manager-grub`
 1. Run the install script as root: `sudo ./install.sh`
-2. Update your grub configuration using `grub-mkconfig` or `update-grub` if your distribution has that
+1. Update your grub configuration using `grub-mkconfig` or `update-grub` if your distribution has that
 
 ### Install Script Arguments
 
