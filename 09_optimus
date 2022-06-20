@@ -120,7 +120,7 @@ customclass_linux_entry() {
         fi
         echo "menuentry '$(echo "$title" | grub_quote)' ${class} ${CLASS} \$menuentry_id_option 'gnulinux-$version-$type-$boot_device_id' {" | sed "s/^/$submenu_indentation/"
     else
-        echo "menuentry '$(echo "$os" | grub_quote)' ${class} ${CLASS} \$menuentry_id_option 'gnulinux-simple-$boot_device_id' {" | sed "s/^/$submenu_indentation/"
+        echo "menuentry '$(echo "$os ($version)" | grub_quote)' ${class} ${CLASS} \$menuentry_id_option 'gnulinux-simple-$boot_device_id' {" | sed "s/^/$submenu_indentation/"
     fi
     if [ x$type != xrecovery ]; then
         save_default_entry | grub_add_tab
