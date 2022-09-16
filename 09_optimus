@@ -207,8 +207,7 @@ title_correction_code=
 
 gettext_printf "Adding optimus-manager boot entries...\n" >&2
 
-while [ "x$list" != "x" ]; do
-    linux=$(version_find_latest $list)
+for linux in ${list}; do
     gettext_printf "Found linux image: %s\n" "$linux" >&2
     basename=$(basename $linux)
     dirname=$(dirname $linux)
