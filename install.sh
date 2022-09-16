@@ -2,7 +2,7 @@
 
 if [ "$EUID" -ne 0 ]; then
     echo "Please run this script as root"
-    exit
+    exit 1
 fi
 
 PATH_TO_SCRIPT="/etc/grub.d/09_optimus"
