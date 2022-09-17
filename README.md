@@ -1,6 +1,6 @@
 # Optimus Manager GRUB Generator
 
-GRUB2 mkconfig script for creating [optimus-manager](https://github.com/Askannz/optimus-manager) boot entires
+GRUB2 mkconfig script for creating [optimus-manager](https://github.com/Askannz/optimus-manager) boot entires. This script is a modified version of what is already shipped with GRUB in `/etc/grub.d/10_linux` (that path is for Arch distributions). This is better than editing 10_linux, because that script will get overridden on GRUB package updates.
 
 ## Usage
 
