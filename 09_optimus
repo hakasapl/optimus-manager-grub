@@ -292,7 +292,7 @@ for linux in ${list}; do
             "${GRUB_CMDLINE_LINUX} ${GRUB_CMDLINE_LINUX_DEFAULT} optimus-manager.startup=nvidia"
     fi
 
-    list=$(echo $list | tr ' ' '\n' | fgrep -vx "$linux" | tr '\n' ' ')
+    list=$(echo $list | tr ' ' '\n' | grep -Fvx "$linux" | tr '\n' ' ')
 done
 
 echo "$title_correction_code"
